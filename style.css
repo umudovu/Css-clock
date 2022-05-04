@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 660px;
+    height: 660px;
+    background-image: url(./clock.png);
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container .box{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.moment{
+    width:210px ;
+    height: 15px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    border-radius: 15px;
+    transform-origin: left;
+    transform: rotateZ(-90deg);
+    animation-name: moment;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.minute{
+    width:180px ;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    border-radius: 10px;
+    transform: rotateZ(-90deg);
+    transform-origin: left;
+    animation-name: minute;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.second{
+    width:150px ;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    border-radius: 5px;
+    transform: rotateZ(-90deg);
+    transform-origin: left;
+    animation-name: second;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes moment{
+    0%{
+        transform: rotateZ(-90deg);
+    }
+    25%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(90deg);
+    }
+    75%{
+        transform: rotateZ(180deg);
+    }
+    100%{
+        transform: rotateZ(270deg);
+    }
+}
+@keyframes minute{
+    0%{
+        transform: rotateZ(-90deg);
+    }
+    25%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(90deg);
+    }
+    75%{
+        transform: rotateZ(180deg);
+    }
+    100%{
+        transform: rotateZ(270deg);
+    }
+}
+
+@keyframes second{
+    0%{
+        transform: rotateZ(-90deg);
+    }
+    25%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(90deg);
+    }
+    75%{
+        transform: rotateZ(180deg);
+    }
+    100%{
+        transform: rotateZ(270deg);
+    }
+}
